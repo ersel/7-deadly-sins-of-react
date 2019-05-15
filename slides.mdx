@@ -134,6 +134,34 @@ import vsDark from "prism-react-renderer/themes/vsDark"
 </div>
 
 ---
+
+<CodeSurfer
+  title="Visibility Props"
+  code={require("!raw-loader!./Examples/VisibilityProp.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: "just a Modal right?" },
+    { range: [2, 14], notes: 'things a Modal do' },
+    { range: [23, 41], notes: 'things a Modal do' },
+    { range: [16, 26], notes: "render method 🔎" },
+    { range: [17, 21], notes: "visibility prop 👁️" },
+  ]}
+/>
+
+---
+
+## Why is that bad?
+
+Although you return `null` from `render()`, this component will still get *mounted* causing memory usage.
+
+Instead, simply pull render behaviour into parent!
+
+---
+
+---
+
 import Demo from './Components/Demo'
 
 ## <Demo />
