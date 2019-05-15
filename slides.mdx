@@ -277,12 +277,40 @@ in *snapshot testing.*
 
 snapshot testing can be a force for good...
 
-...when used *granularly* and *sparingly*!
+...when used *granularly* and *sparingly!*
 
 ---
 
-import Demo from './Components/Demo'
+<CodeSurfer
+  title="Black Box Testing"
+  code={require("!raw-loader!./Examples/BlackBoxTesting.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: 'avoid setting or asserting against state in your tests directly!' },
+    { lines: [3, 9], notes: "test cases know the internal workings of the unit under test" }
+  ]}
+/>
 
-## <Demo />
+---
 
-# The end
+<CodeSurfer
+  title="Black Box Testing"
+  code={require("!raw-loader!./Examples/BlackBoxTesting.1.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: 'tests should be conducted in a "black box"' },
+    { lines: [3, 9], notes: "refactoring the inner workings of the component should not make my tests fail!" }
+  ]}
+/>
+
+---
+
+# Any anti-patterns you've encountered?
+
+---
+
+# That's all. Thank you.
