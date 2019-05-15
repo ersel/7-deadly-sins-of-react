@@ -78,6 +78,40 @@ import vsDark from "prism-react-renderer/themes/vsDark"
 
 ---
 
+<CodeSurfer
+  title="Prop Gluttony"
+  code={require("!raw-loader!./Examples/PropGluttony1.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: "sometimes it is tempting to introduce a new prop..."},
+    { lines: [2,3,4], notes: "...mkay" },
+    { lines: [8, 11, 12], notes: "... hold on a second" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Prop Gluttony"
+  code={require("!raw-loader!./Examples/PropGluttony2.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { lines: [12], notes: "you can simply derive current step, right?" },
+    { lines: [4, 27], notes: "that means we can drop this prop" },
+  ]}
+/>
+
+---
+
+## pay attention to existing props!
+## what can be derived, should be derived!
+
+---
+
 import Demo from './Components/Demo'
 
 ## <Demo />
