@@ -112,6 +112,28 @@ import vsDark from "prism-react-renderer/themes/vsDark"
 
 ---
 
+<CodeSurfer
+  title="State Greedy"
+  code={require("!raw-loader!./Examples/LiftStateUp.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: "state should be high up, in the heavens ☁️" },
+    { range: [6, 15] },
+    { range: [19, 27], notes: "getDerivedStateFromProps..." },
+    { range: [29, 33], notes: "setting its state and also notifying the parent about it?" },
+  ]}
+/>
+
+---
+
+<div style={{height: 'auto'}}>
+  <h2>After sacrificing state to the Gods higher up...</h2>
+  <img style={ {objectFit: "cover", height: "70vh"}} src={'./images/refactor.png'}></img>
+</div>
+
+---
 import Demo from './Components/Demo'
 
 ## <Demo />
