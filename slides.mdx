@@ -187,6 +187,82 @@ Instead, simply pull render behaviour into parent!
 
 ---
 
+<div style={{height: 'auto'}}>
+  <h3>here is a complimentary photo of Dan Abramov</h3>
+  <img style={ {objectFit: "cover", height: "70vh"}} src={'./images/dan.jpg'}></img>
+</div>
+
+---
+
+### Now that we have talked about React Trinity
+
+1. The State
+2. The Props
+3. Dan Abramov
+
+a few last words on testing...
+
+---
+
+I used to be a non-believer...
+
+---
+
+in *snapshot testing.*
+
+---
+
+1 - it is not TDD at all...
+
+2 - feels like cheating...
+
+---
+
+3 - Should we trust people to *actually read into differences* rather than just hitting update snapshots?
+
+---
+
+<CodeSurfer
+  title="Granular Snapshots 🔬"
+  code={require("!raw-loader!./Examples/GranularSnapshots.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: 'snapshots are an easy way to increase test coverage!' },
+    { lines: [12, 13], notes: "my job here is done." }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Granular Snapshots 🔬"
+  code={require("!raw-loader!./Examples/Snapshots.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: 'Good job! Snapshot for that test case alone is 60 lines long!' },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  code={require("!raw-loader!./Examples/GranularSnapshots.1.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: 'you wont believe this one simple trick to reduce snapshot size by 90%' },
+    { lines: [13], notes: "be specific!" }
+  ]}
+/>
+
+
+---
+
 import Demo from './Components/Demo'
 
 ## <Demo />
