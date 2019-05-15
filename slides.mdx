@@ -173,6 +173,20 @@ Instead, simply pull render behaviour into parent!
 
 ---
 
+<CodeSurfer
+  title="Disparity between imported symbols and filesystem"
+  code={require("!raw-loader!./Examples/LocationModuleNameDisparity.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: 'Unnecessary mental heap usage. 🧠' },
+    { lines: [2, 8], notes: "Please dont do this. 🙏" }
+  ]}
+/>
+
+---
+
 import Demo from './Components/Demo'
 
 ## <Demo />
