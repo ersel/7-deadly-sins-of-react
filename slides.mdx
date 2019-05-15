@@ -1,0 +1,85 @@
+export { dark as theme } from 'mdx-deck/themes'
+import { Notes } from 'mdx-deck'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import vsDark from "prism-react-renderer/themes/vsDark"
+
+## 7 Deadly Sins of React 
+⚛ 🔥 😈 🔥 ⚛
+
+---
+
+<CodeSurfer
+  title="$ whoami"
+  code={require("!raw-loader!./Examples/AboutMe.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { range:[1, 8]},
+    { lines: [2]},
+    { lines: [5]},
+    { lines: [6] },
+    { lines: [7] },
+    { lines: [3],},
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Tightly Coupled Components"
+  code={require("!raw-loader!./Examples/TightlyCoupled.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: "components should be reusable"},
+    { lines: [1] , notes: "Note for the third step" },
+    { lines: [6]},
+    { range: [8, 13], notes: "what is the formApi 🤔" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Tightly Coupled Components"
+  code={require("!raw-loader!./Examples/TightlyCoupledParent.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: "let's take a look at where it is used..."},
+    { lines: [6], notes: "...so FormApi is a render prop!" },
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Tightly Coupled Components"
+  code={require("!raw-loader!./Examples/TightlyCoupledGetsBetter.js").default}
+  showNumbers={true}
+  theme={vsDark}
+  dark={false}
+  steps={[
+    { notes: "it gets better, what if?"},
+    { lines: [2,3,4] },
+    { lines: [13, 14] },
+  ]}
+/>
+
+---
+
+## Why is that bad?
+
+### hard to reuse this component somewhere else
+### changes to FormApi will have an impact unlikely to be caught at unit test level
+
+---
+
+import Demo from './Components/Demo'
+
+## <Demo />
+
+# The end
