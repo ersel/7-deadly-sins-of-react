@@ -2,7 +2,7 @@
     name="Ersel"
     twitter="@ErselAker"
 >
-    JavaScript Consultant
+    Fullstack JavaScript Consultant 🇬🇧
     Tutor @ McrCodes
     Help organize Microservices Manchester and MancJS meetups
 </AboutMe>
