@@ -26,6 +26,11 @@ import vsDark from "prism-react-renderer/themes/vsDark"
 
 ---
 
+## Sin #1: Tightly Coupled Components
+
+---
+
+
 <CodeSurfer
   title="Tightly Coupled Components"
   code={require("!raw-loader!./Examples/TightlyCoupled.js").default}
@@ -77,6 +82,10 @@ import vsDark from "prism-react-renderer/themes/vsDark"
 
 ---
 
+# Sin #2: Prop Gluttony
+
+---
+
 <CodeSurfer
   title="Prop Gluttony"
   code={require("!raw-loader!./Examples/PropGluttony1.js").default}
@@ -111,6 +120,10 @@ import vsDark from "prism-react-renderer/themes/vsDark"
 
 ---
 
+# Sin #3: State Greedy
+
+---
+
 <CodeSurfer
   title="State Greedy"
   code={require("!raw-loader!./Examples/LiftStateUp.js").default}
@@ -131,6 +144,10 @@ import vsDark from "prism-react-renderer/themes/vsDark"
   <h2>After sacrificing state to the Gods higher up...</h2>
   <img style={ {objectFit: "cover", height: "70vh"}} src={'./images/refactor.png'}></img>
 </div>
+
+---
+
+# Sin #4: Visibility Prop
 
 ---
 
@@ -172,6 +189,10 @@ Instead, simply pull render behaviour into parent!
 
 ---
 
+# Sin #5: Inconsistent Naming
+
+---
+
 <CodeSurfer
   title="Disparity between imported symbols and filesystem"
   code={require("!raw-loader!./Examples/LocationModuleNameDisparity.js").default}
@@ -203,6 +224,12 @@ a few last words on testing...
 
 ---
 
+<div style={{height: 'auto'}}>
+  <img style={ {objectFit: "cover", height: "70vh"}} src={'./images/confession.png'}></img>
+</div>
+
+---
+
 I used to be a non-believer...
 
 ---
@@ -222,7 +249,7 @@ in *snapshot testing.*
 ---
 
 <CodeSurfer
-  title="Granular Snapshots 🔬"
+  title="Sin #6: Overzealous Snapshots"
   code={require("!raw-loader!./Examples/GranularSnapshots.js").default}
   showNumbers={true}
   theme={vsDark}
@@ -236,7 +263,7 @@ in *snapshot testing.*
 ---
 
 <CodeSurfer
-  title="Granular Snapshots 🔬"
+  title="Sin #6: Overzealous Snapshots"
   code={require("!raw-loader!./Examples/Snapshots.js").default}
   showNumbers={true}
   theme={vsDark}
@@ -245,6 +272,16 @@ in *snapshot testing.*
     { notes: 'Good job! Snapshot for that test case alone is 60 lines long!' },
   ]}
 />
+
+---
+
+# Sin #6: Overzealous Snapshots
+
+---
+
+<div style={{height: 'auto'}}>
+  <img style={ {objectFit: "cover", height: "70vh"}} src={'./images/epiphany.jpg'}></img>
+</div>
 
 ---
 
@@ -280,6 +317,10 @@ snapshot testing can be a force for good...
 
 ---
 
+# Sin #7: Intimacy with Enzyme
+
+---
+
 <CodeSurfer
   title="Black Box Testing"
   code={require("!raw-loader!./Examples/BlackBoxTesting.js").default}
@@ -291,6 +332,12 @@ snapshot testing can be a force for good...
     { lines: [3, 9], notes: "test cases know the internal workings of the unit under test" }
   ]}
 />
+
+---
+
+<div style={{height: 'auto'}}>
+  <img style={ {objectFit: "cover", height: "70vh"}} src={'./images/kent_c_quote.png'}></img>
+</div>
 
 ---
 
@@ -308,7 +355,18 @@ snapshot testing can be a force for good...
 
 ---
 
-# Any anti-patterns you've encountered?
+# Summary
+
+1. Tightly Coupled Components
+2. Prop Gluttony
+3. State Greedy Components
+
+---
+
+4. Visibility Props
+5. Inconsistent Naming
+6. Overzealous Snapshots
+7. Intimacy with Enzyme
 
 ---
 
